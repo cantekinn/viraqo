@@ -113,4 +113,4 @@ tarim-asistani/
     config.py
   tests/
   README.md
-  requirements.txt```
+  requirements.txt
