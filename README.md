@@ -76,7 +76,8 @@ Sprint 1 sonunda takım içi süreçlerin ve mühendislik pratiklerinin kalitesi
 
   
 ### 7. Mimarı Yapı
-* tarim-asistani/
+```
+tarim-asistani/
   app/                    # arayüz katmanı
     ui/                   # Streamlit (hızlı MVP) veya Next.js
     whatsapp/             # WhatsApp webhook
@@ -112,4 +113,4 @@ Sprint 1 sonunda takım içi süreçlerin ve mühendislik pratiklerinin kalitesi
     config.py
   tests/
   README.md
-  requirements.txt
+  requirements.txt```
