@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Ortam degiskenleri (API anahtarlari)
+.env
+
+# Veri / model ciktilari
+*.db
+*.sqlite3
+models/**/*.pkl
+models/**/*.joblib
+models/**/*.pt
+data/cache/
+
+# Egitim verisi (buyuk, acik kaynaktan indirilir; repoya konmaz)
+data/plantvillage/
+data/plantdoc/
+data/ood_holdout/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

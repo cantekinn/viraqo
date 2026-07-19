@@ -1,0 +1,9 @@
+biber_bakteriyel_leke
+biber_saglikli
+domates_bakteriyel_leke
+domates_erken_yaniklik
+domates_gec_yaniklik
+domates_saglikli
+patates_erken_yaniklik
+patates_gec_yaniklik
+patates_saglikli

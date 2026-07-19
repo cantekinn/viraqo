@@ -1,0 +1,79 @@
+# Hastalik tedavi bilgi tabani (Sprint 2 - advisor agent)
+#
+# Teshis agent'inin (CNN) veya kullanici sorgusunun urettigi hastalik etiketini
+# tedaviye baglar. Her kayit:
+#   ad       -> hastalik adi (kullaniciya gosterilir)
+#   konak    -> etkiledigi urunler
+#   anahtar  -> sorguda/etikette eslesecek kelimeler (kucuk harf). Model etiketleri
+#               ASCII oldugundan (ornek: "erken yaniklik") ASCII varyant korunur;
+#               kullanici Turkce yazabildigi icin Turkce varyant da eklenir.
+#   belirti  -> tipik gorunum
+#   dogal    -> dusuk girdili/organik onlem
+#   kimyasal -> etkili madde SINIFI (marka degil); ruhsatli urun + etiket dozu sart
+#   korunma  -> kulturel onlem
+#
+# UYARI: Kimyasal oneriler madde SINIFIDIR. Kesin urun/doz icin il/ilce Tarim
+# Mudurlugu ve ruhsatli bayi + etiket talimati esastir (yasal zorunluluk).
+
+erken_yaniklik:
+  ad: "Erken yanıklık (Alternaria)"
+  konak: [domates, patates, biber]
+  anahtar: [erken yaniklik, erken yanıklık, alternaria, hedefli leke, halkalı leke, halkali leke]
+  belirti: "Alt yapraklarda iç içe halkalı kahverengi lekeler, sararan yaprak."
+  dogal: "Enfekteli yaprakları topla-imha et, damla sulama kullan (yaprak ıslanmasın), bakır bazlı preparat uygula."
+  kimyasal: "Koruyucu: mancozeb/klorotalonil; tedavi: azoksistrobin/difenokonazol (strobilurin/triazol)."
+  korunma: "Münavebe, dengeli azot, iyi havalanma, dayanıklı çeşit."
+
+gec_yaniklik:
+  ad: "Geç yanıklık / mildiyö (Phytophthora infestans)"
+  konak: [domates, patates]
+  anahtar: [gec yaniklik, geç yanıklık, mildiyo, mildiyö, phytophthora, su islaklik lekesi, su ıslaklık lekesi]
+  belirti: "Yaprakta yağımsı koyu lekeler, alt yüzeyde beyaz küf, serin-nemli havada hızlı yayılım."
+  dogal: "Nem yönetimi, sık izleme, bakır hidroksit; hasta bitkileri hemen uzaklaştır."
+  kimyasal: "Koruyucu mancozeb + sistemik cymoxanil/dimetomorf/mandipropamid; nemli havada program."
+  korunma: "Sertifikalı tohum/yumru, sabah sulaması, sık dikimden kaçın."
+
+kulleme:
+  ad: "Külleme (Powdery mildew)"
+  konak: [domates, biber, muz]
+  anahtar: [kulleme, külleme, powdery mildew, beyaz un, pudra]
+  belirti: "Yaprak yüzeyinde un gibi beyaz-gri örtü, sararan-kuruyan yaprak."
+  dogal: "Süt-su karışımı veya potasyum bikarbonat, kükürt tozu, havalanmayı artır."
+  kimyasal: "Kükürt bazlı; tebukonazol/miklobutanil (triazol) veya kinoksifen."
+  korunma: "Gölge/nem fazlalığından kaçın, sıra arasını geniş tut, dayanıklı çeşit."
+
+bakteriyel_leke:
+  ad: "Bakteriyel leke (Xanthomonas)"
+  konak: [domates, biber]
+  anahtar: [bakteriyel leke, xanthomonas, bakteri, sulu leke]
+  belirti: "Yaprak/meyvede sulu, koyu kenarlı küçük lekeler; sarı haleli."
+  dogal: "Bakır + mancozeb, temiz tohum, alet dezenfeksiyonu, hasta bitki imhası."
+  kimyasal: "Bakır bileşikleri (rutin koruma); bakteride sistemik kimyasal sınırlı, korunma esas."
+  korunma: "Üç yıl münavebe, üstten sulamadan kaçın, dirençli çeşit."
+
+zeytin_halkali_leke:
+  ad: "Zeytin halkalı leke / tavus gözü (Spilocaea oleagina)"
+  konak: [zeytin]
+  anahtar: [halkali leke, halkalı leke, tavus gozu, tavus gözü, zeytin leke, spilocaea]
+  belirti: "Yapraklarda tavus kuyruğu deseninde yeşil-kahve halkalı lekeler, erken yaprak dökümü."
+  dogal: "Tacı seyrelt (havalandırma), düşen yaprakları temizle, sonbahar/ilkbahar bakır uygulaması yap."
+  kimyasal: "Bakır oksiklorür / bordo bulamacı; gerektiğinde dodine."
+  korunma: "Nemli-gölgeli iç tacı aç, dengeli gübreleme."
+
+narenciye_zamklanma:
+  ad: "Narenciye zamklanma (Phytophthora gummosis)"
+  konak: [narenciye]
+  anahtar: [zamklanma, gummosis, phytophthora, kok cururmesi, kök çürümesi, govde zamk, gövde zamk]
+  belirti: "Gövde/kök boynunda zamk akıntısı, kabuk çürümesi, sararan taç."
+  dogal: "Boğuk dikimi düzelt (aşı noktası topraktan yukarıda olsun), drenajı iyileştir, gövde dibini kuru tut."
+  kimyasal: "Fosfonat (fosetil-Al) / metalaksil sistemik; yara temizliği + bakır macun."
+  korunma: "Dayanıklı anaç, aşırı sulamadan kaçın, gövdeye su değdirme."
+
+muz_yaprak_leke:
+  ad: "Muz yaprak lekesi (Sigatoka)"
+  konak: [muz]
+  anahtar: [sigatoka, muz leke, yaprak cizgi, yaprak çizgi]
+  belirti: "Yapraklarda çizgi/leke, sararma ve erken kuruma, verim düşüşü."
+  dogal: "Hasta yaprağı buda-imha et, sıra arası havalanmayı sağla, dengeli potasyum ver."
+  kimyasal: "Koruyucu mancozeb + mineral yağ; sistemik triazol (örtü altında nadir)."
+  korunma: "Sık dikimden kaçın, drenaj, dengeli gübre."
