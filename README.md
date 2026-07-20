@@ -169,7 +169,9 @@ Sprint başında "To Do" sütununda yer alan iş paketlerimizin tamamı tamamlan
 * **In Progress (0 Görev):** Bu sprintte devam eden kart kalmadı; hedeflere %100 ulaşıldı.
 * **To Do (Sprint 3'e devir):** Karbon ayak izi agent'ı bilinçli olarak Sprint 3'e bırakılan bir stub olarak duruyor. Ayrıca narenciye/zeytin/muz için gerçek hastalık sınıfları, WhatsApp entegrasyonu ve çoklu parsel/premium bir sonraki sprintin backlog'una alındı.
 
-<!-- Buraya Sprint Board (Miro) ekran görüntüsü eklenecek -->
+<img width="2938" height="1582" alt="WhatsApp Image 2026-07-18 at 11 06 32 (1)" src="https://github.com/user-attachments/assets/2e7024a1-1213-4bd3-b25f-f1ee0af59f9e" />
+<img width="2940" height="1586" alt="WhatsApp Image 2026-07-18 at 11 08 15" src="https://github.com/user-attachments/assets/8e341a96-9593-432b-bd70-29c6ba1b1504" />
+
 
 ---
 
