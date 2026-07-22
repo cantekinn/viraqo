@@ -10,9 +10,9 @@ Takımımız 3 kişiden oluşmakta olup Sprint 1 için planlanan toplam iş hacm
 | Crop Recommendation GBDT Modeli Eğitimi | 8 | Sıla | Done |
 | Tarla Profili DB Şeması ve Hafıza Temeli | 5 | Özlem | Done |
 | Toprak ve İklim API İstemcileri (SoilGrids + Open-Meteo) | 5 | Can | Done |
-| MEGSİS Parsel İstemcisi Entegrasyonu ve Koordinat Çıkarımı | 5 | Özlem | In Progress |
+| MEGSİS Parsel İstemcisi Entegrasyonu ve Koordinat Çıkarımı | 5 | Özlem | Done |
 | Proje Repo İskeleti ve LangGraph Orkestratör Kabuğu | 3 | Can | Done |
-| Basit UI MVP: Parsel Girişi ve Ürün Önerisi Ekranı | 3 | Birlikte | In Progress |
+| Basit UI MVP: Parsel Girişi ve Ürün Önerisi Ekranı | 3 | Birlikte | Done |
 | Antalya Ürün Bilgi Tabanı Oluşturulması (crop_params.yaml) | 2 | Sıla | Done |
 
 <img width="2936" height="1692" alt="WhatsApp Image 2026-07-05 at 15 26 36" src="https://github.com/user-attachments/assets/7e3aebc8-8b29-4363-95d9-eb91df498652" />
